@@ -30,6 +30,10 @@ namespace Completed
 		{
 			//Get a component reference to the Player's animator component
 			animator = GetComponent<Animator>();
+
+			//ADDED BY JOHN. Scale Irene (i.e. Player) animation down
+			float desiredScale = 0.3f; // your scale factor
+			transform.localScale = new Vector3(desiredScale, desiredScale, 0);
 			
 			//Get the current food point total stored in GameManager.instance between levels.
 			food = GameManager.instance.playerFoodPoints;
