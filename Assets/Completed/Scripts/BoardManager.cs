@@ -42,7 +42,9 @@ namespace Completed
 
 		//ADDED BY JOHN
 		public GameObject Dave;											//Dave prefab
-		
+		public GameObject Paul;											//Paul prefab
+		private float paulScale = 4f;
+		//public GameObject Dave1;
 		
 		//Clears our list gridPositions and prepares it to generate a new board.
 		void InitialiseList ()
@@ -159,6 +161,17 @@ namespace Completed
 			if (level == 1)
 			{
 				Instantiate (Dave, new Vector3 (0, rows - 1, 0f), Quaternion.identity);
+			}
+
+			if (level == 1) 
+			{
+				Paul.transform.localScale = new Vector3(paulScale, paulScale, 0);
+				Instantiate (Paul, new Vector3 (columns-1, 0, 0f), Quaternion.identity);
+			}
+
+			if (level == 1) 
+			{
+				//Instantiate (Paul, new Vector3 (columns-1, 0f, 0f), Quaternion.identity);
 			}
 		}
 	}
